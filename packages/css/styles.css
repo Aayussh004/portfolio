@@ -7,8 +7,9 @@
 
   /*========== Colors ==========*/
   /* Change favorite color */
-  --hue-color: 190; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
-
+  --hue-color: 206; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+  --new-color:220;
+  --header-dark:rgb(250, 12, 12);
   /* HSL color mode */
   --first-color: hsl(var(--hue-color), 69%, 61%);
   --first-color-second: hsl(var(--hue-color), 69%, 61%);
@@ -18,7 +19,10 @@
   --text-color: hsl(var(--hue-color), 8%, 45%);
   --text-color-light: hsl(var(--hue-color), 8%, 65%);
   --input-color: hsl(var(--hue-color), 70%, 96%);
-  --body-color: hsl(var(--hue-color), 60%, 99%);
+  /* --body-color: hsl(var(--hue-color), 60%, 99%); */
+  --body-color: hsl(var(--hue-color), 60%, 84%);
+  --header-bg-color:hsl(var(--hue-color), 80%, 81%);
+  --header-hover-color:hsl(var(--new-color), 44%, 50%);
   --container-color: #fff;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
@@ -75,6 +79,8 @@ body.dark-theme {
   --first-color-second: hsl(var(--hue-color), 30%, 8%);
   --title-color: hsl(var(--hue-color), 8%, 95%);
   --text-color: hsl(var(--hue-color), 8%, 45%);
+  --header-bg-color:hsl(var(--hue-color), 53%, 30%);
+  --header-hover-color:hsl(var(--header-dark), 10%, 100%);
   --text-color-light: hsl(var(--hue-color), 8%, 75%);
   --input-color: hsl(var(--hue-color), 29%, 16%);
   --body-color: hsl(var(--hue-color), 28%, 12%);
@@ -181,7 +187,8 @@ img {
   bottom: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--body-color);
+  /* background-color: var(--body-color); */
+  background-color: var(--header-bg-color);
 }
 
 /*==================== NAV ====================*/
@@ -196,11 +203,14 @@ img {
 .nav__logo,
 .nav__toggle {
   color: var(--title-color);
+  /* color: var(--header-hover-color); */
   font-weight: var(--font-medium);
 }
 
 .nav__logo:hover {
   color: var(--first-color);
+  /* color: white; */
+  /* color: var(--header-hover-color); */
 }
 
 .nav__toggle {
@@ -210,6 +220,7 @@ img {
 
 .nav__toggle:hover {
   color: var(--first-color);
+  /* color: var(--header-hover-color); */
 }
 
 @media screen and (max-width: 767px) {
@@ -236,11 +247,13 @@ img {
   align-items: center;
   font-size: var(--small-font-size);
   color: var(--title-color);
+  /* color: var(--header-hover-color); */
   font-weight: var(--font-medium);
 }
 
 .nav__link:hover {
-  color: var(--first-color);
+  /* color: var(--first-color); */
+  color: var(--header-hover-color);
 }
 
 .nav__icon {
@@ -267,7 +280,8 @@ img {
 
 /* Active link */
 .active-link {
-  color: var(--first-color);
+  /* color: var(--first-color); */
+  color: var(--header-hover-color);
 }
 
 /* Change background header */
